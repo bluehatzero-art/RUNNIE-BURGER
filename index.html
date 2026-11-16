@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🍔 Burger Runner - Endless Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍔</text></svg>">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="burger-loader"></div>
+            <p>Loading Burger Runner...</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Canvas Container -->
+    <div class="game-container">
+        <canvas id="gameCanvas"></canvas>
+        
+        <!-- UI Overlay -->
+        <div id="uiOverlay" class="ui-overlay">
+            <div class="score-panel">
+                <div class="score">Score: <span id="currentScore">0</span></div>
+                <div class="high-score">Best: <span id="highScore">0</span></div>
+            </div>
+            
+            <div id="gameOverScreen" class="game-over hidden">
+                <div class="game-over-content">
+                    <h1>🍔 Game Over!</h1>
+                    <div class="final-scores">
+                        <div>Score: <span id="finalScore">0</span></div>
+                        <div>Best: <span id="finalHighScore">0</span></div>
+                    </div>
+                    <button id="restartBtn">Play Again</button>
+                </div>
+            </div>
+
+            <div id="pauseScreen" class="pause-screen hidden">
+                <div class="pause-content">
+                    <h2>⏸️ Paused</h2>
+                    <button id="resumeBtn">Resume</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Controls -->
+    <div class="mobile-controls">
+        <button id="jumpBtn" class="control-btn jump-btn">⏀</button>
+    </div>
+    
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
